@@ -1,8 +1,8 @@
+using System.Collections.Generic;
+
 public class Sinner: DefaultChar
 {
     SinnerType character;
 
-    Skill ego;
-
-    public virtual void SupportPassive() { }
+    List <Skill> ego;
 }
