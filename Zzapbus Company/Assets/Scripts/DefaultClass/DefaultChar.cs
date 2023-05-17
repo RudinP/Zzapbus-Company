@@ -22,6 +22,6 @@ public class DefaultChar
 
     List<Skill> skills;
 
-    public virtual void Passive() { }
+    List<Passive> passives;
 
 }
