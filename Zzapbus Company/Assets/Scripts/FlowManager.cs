@@ -30,4 +30,9 @@ public class FlowManager : MonoBehaviour
     {
         SceneManager.LoadScene("CharacterSelect");
     } 
+
+    public void ToBattle()
+    {
+        SceneManager.LoadScene("Battle");
+    }
 }
