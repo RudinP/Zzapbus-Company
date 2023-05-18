@@ -2,6 +2,7 @@
 public enum SinType
 {
     //분노 색욕 나태 탐식 우울 오만 질투
+    none,
     ira,
     luxuria,
     pigritia,
@@ -15,26 +16,21 @@ public enum SinType
 //생물체 타입
 public enum Type
 {
-    character,
+    sinner,
     abnormality,
     enemy,
 }
 
-//공격 타입
-public enum DmgType
-{
-    none,
-    slash,
-    penetrate,
-    hit,
-}
-
-//방어스킬 종류
-public enum DefenseType
+//스킬 타입
+public enum SkillType
 {
     defense,
     dodge,
     counter,
+
+    slash,
+    penetrate,
+    hit,
 }
 
 public enum SinnerType

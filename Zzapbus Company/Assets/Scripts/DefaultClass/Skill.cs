@@ -4,9 +4,7 @@ public class Skill
 { 
     public Sprite sprite;
 
-    DmgType dmgType;
-
-    DefenseType defenseType;
+    SkillType type;
 
     SinType sinType;
 

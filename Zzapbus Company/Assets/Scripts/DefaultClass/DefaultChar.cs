@@ -2,26 +2,25 @@ using System.Collections.Generic;
 
 public class DefaultChar
 {
-    struct speed { int min, max; }
+    public struct Speed { public int min, max; }
 
-    struct tolerance
+    public struct Tolerance
     {
-        DmgType tol;
-        DmgType endure;
-        DmgType normal;
-        DmgType vul;
+        public SkillType tol, endure, normal, val;
     }
 
-    Type charType;
+    public Type charType;
+    
+    public string name;
 
-    string name;
+    public float hp;
 
-    float hp;
+    public Speed speed;
 
-    float defenseConf;
+    public Tolerance tolerance;
 
-    List<Skill> skills;
+    public List<Skill> skills;
 
-    List<Passive> passives;
+    public List<Passive> passives;
 
 }
