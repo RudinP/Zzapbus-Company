@@ -3,11 +3,9 @@ using UnityEngine;
 
 public class Sinner: DefaultChar
 {
-    public Sprite portraitBig;
+    public Sprite portrait;
 
-    public Sprite portraitSmall;
+    public SinnerType character;
 
-    SinnerType character;
-
-    List <Skill> ego;
+    public List<Skill> ego;
 }
