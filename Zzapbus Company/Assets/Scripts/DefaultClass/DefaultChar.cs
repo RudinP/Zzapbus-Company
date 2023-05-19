@@ -17,6 +17,8 @@ public class DefaultChar
 
     public float dmg;
 
+    public float defense;
+
     public int sanity;
 
     public int[] rumpled;

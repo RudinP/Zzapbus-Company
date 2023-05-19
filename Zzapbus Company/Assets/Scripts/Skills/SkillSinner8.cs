@@ -41,5 +41,8 @@ public class SkillSinner8 : MonoBehaviour
         skill3.coin = 1;
         skill3.coinDmg = 12f;
         skills.Add(skill3);
+
+        DefenseSkill defenseSkill = new DefenseSkill("가드", SkillType.defense, 7f, 3f);
+        skills.Add(defenseSkill);
     }
 }
