@@ -1,22 +1,22 @@
 using UnityEngine;
 
 public class Skill
-{ 
+{
+    public string name;
+
     public Sprite sprite;
 
-    SkillType type;
+    public SkillType type;
 
-    SinType sinType;
+    public SinType sinType;
 
-    float defaultDmg;
+    public int ratio;
+
+    public float defaultDmg;
     
-    int coin;
+    public int coin;
 
-    int ratio;
-
-    float coinConf;
-
-    string info;
+    public float coinDmg;
 
     public virtual void Use(){ }
    

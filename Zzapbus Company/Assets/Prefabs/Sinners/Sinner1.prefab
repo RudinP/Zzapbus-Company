@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2115797695189540921}
   - component: {fileID: 8518974943678612625}
   - component: {fileID: 2115797695189540922}
+  - component: {fileID: 5758301266013878988}
   m_Layer: 0
   m_Name: Sinner1
   m_TagString: Sinner
@@ -98,3 +99,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portrait: {fileID: 21300000, guid: 6bbb4ed2770c0dd4b8c08dcc26bc20ad, type: 3}
+--- !u!114 &5758301266013878988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115797695189540923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a11ba84c8a77d43847e6fbbbb73d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites: []

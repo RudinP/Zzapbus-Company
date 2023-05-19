@@ -22,6 +22,8 @@ public class Sinner10 : MonoBehaviour
 
         sinner.hp = 122;
 
+        sinner.dmg = 38f;
+
         sinner.sanity = 0;
 
         sinner.rumpled = new int[] { 110, 70, 20 };
