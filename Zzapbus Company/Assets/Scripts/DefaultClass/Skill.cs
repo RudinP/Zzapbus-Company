@@ -12,6 +12,8 @@ public class Skill
     
     int coin;
 
+    int ratio;
+
     float coinConf;
 
     string info;

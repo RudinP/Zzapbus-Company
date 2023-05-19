@@ -15,6 +15,10 @@ public class DefaultChar
 
     public float hp;
 
+    public int sanity;
+
+    public int[] rumpled;
+
     public Speed speed;
 
     public Tolerance tolerance;
