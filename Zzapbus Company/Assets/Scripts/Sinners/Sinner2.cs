@@ -22,6 +22,8 @@ public class Sinner2 : MonoBehaviour
 
         sinner.hp = 171;
 
+        sinner.dmg = 28f;
+
         sinner.sanity = 0;
 
         sinner.rumpled = new int[] { 110, 70, 20 };
@@ -33,7 +35,7 @@ public class Sinner2 : MonoBehaviour
         sinner.tolerance.normal = SkillType.hit;
         sinner.tolerance.val = SkillType.slash;
 
-        //sinner.skills = ;
+        sinner.skills = this.GetComponent<SkillSinner2>().skills;
         //sinner.passives = ;
 
         sinner.portrait = portrait;
