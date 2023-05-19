@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sinner1 : MonoBehaviour
+public class Sinner5 : MonoBehaviour
 {
     public Sprite portrait;
 
@@ -20,25 +20,25 @@ public class Sinner1 : MonoBehaviour
 
         sinner.name = "LCB ¼ö°¨ÀÚ";
 
-        sinner.hp = 146;
+        sinner.hp = 183;
 
         sinner.sanity = 0;
 
-        sinner.rumpled = new int[]{110, 70, 20};
+        sinner.rumpled = new int[] { 110, 70, 20 };
 
-        sinner.speed.min = 4;
-        sinner.speed.max = 8;
+        sinner.speed.min = 2;
+        sinner.speed.max = 3;
 
-        sinner.tolerance.tol = SkillType.penetrate;
-        sinner.tolerance.normal = SkillType.hit;
-        sinner.tolerance.val = SkillType.slash;
+        sinner.tolerance.tol = SkillType.hit;
+        sinner.tolerance.normal = SkillType.slash;
+        sinner.tolerance.val = SkillType.penetrate;
 
         //sinner.skills = ;
         //sinner.passives = ;
 
         sinner.portrait = portrait;
 
-        sinner.character = SinnerType.yisang;
+        sinner.character = SinnerType.meursault;
 
         //sinner.ego = ;
     }
