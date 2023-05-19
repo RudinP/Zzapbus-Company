@@ -35,7 +35,7 @@ public class Sinner10 : MonoBehaviour
         sinner.tolerance.normal = SkillType.hit;
         sinner.tolerance.val = SkillType.penetrate;
 
-        //sinner.skills = ;
+        sinner.skills = this.GetComponent<SkillSinner10>().skills;
         //sinner.passives = ;
 
         sinner.portrait = portrait;
