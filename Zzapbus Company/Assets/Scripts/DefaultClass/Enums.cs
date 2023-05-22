@@ -48,3 +48,13 @@ public enum SinnerType
     outis,
     gregor
 }
+
+//에고 등급
+public enum EgoGrade
+{
+    zayin,
+    teth,
+    he,
+    waw,
+    aleph,
+}
