@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7338146550515244512}
   - component: {fileID: 474091068429195575}
   - component: {fileID: 4822254485818863403}
+  - component: {fileID: 9090769209713649021}
   m_Layer: 0
   m_Name: Sinner2
   m_TagString: Sinner
@@ -112,3 +113,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites: []
+--- !u!114 &9090769209713649021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7488115158508685525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f70d30ee2b8a240ba2d5495c114764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
