@@ -8,6 +8,11 @@ public class SinnerLoader : MonoBehaviour
 
     public void Awake()
     {
-        
+        foreach(GameObject sinner in sinners)
+        {
+            sinner.GetComponent<SkillScript>().Init();
+            sinner.GetComponent<EgoScript>().Init();
+            sinner.GetComponent<SinnerScript>().Init();
+        }
     }
 }

@@ -14,7 +14,7 @@ public class Ego : Skill
 
     public struct Tolerance
     {
-        public SinType endure;
+        public List<SinType> endure;
         public List<SinType> vul;
     }
 }

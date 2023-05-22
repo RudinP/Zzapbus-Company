@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2638058873872546492
+--- !u!1 &3644206717316176765
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7383099794050698894}
-  - component: {fileID: 8347629062075863098}
-  - component: {fileID: 5072649550442748090}
-  - component: {fileID: 6757517622004349744}
-  - component: {fileID: -4789191456420034925}
+  - component: {fileID: 5296967370986169407}
+  - component: {fileID: 4779556189906664652}
+  - component: {fileID: 5685277660598483670}
+  - component: {fileID: 8138815789548429976}
+  - component: {fileID: 2524603609247417894}
   m_Layer: 0
   m_Name: Sinner11
   m_TagString: Sinner
@@ -20,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7383099794050698894
+--- !u!4 &5296967370986169407
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2638058873872546492}
+  m_GameObject: {fileID: 3644206717316176765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,13 +35,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8347629062075863098
+--- !u!212 &4779556189906664652
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2638058873872546492}
+  m_GameObject: {fileID: 3644206717316176765}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -87,41 +87,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5072649550442748090
+--- !u!114 &5685277660598483670
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2638058873872546492}
+  m_GameObject: {fileID: 3644206717316176765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc4f063d0a35bf4684916c4e8a89a2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3368b8f0d85bda94386eab041d2185ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portrait: {fileID: 21300000, guid: 23170b163488e074f9362f88ce2c69c0, type: 3}
---- !u!114 &6757517622004349744
+  hp: 146
+  dmg: 28
+  defense: 36
+  sanity: 0
+  rumpled:
+  - 110
+  - 70
+  - 20
+  minSpeed: 4
+  maxSpeed: 8
+  tol: 4
+  normal: 5
+  vul: 3
+  skill: {fileID: 8138815789548429976}
+  ego: {fileID: 2524603609247417894}
+  portrait: {fileID: 21300000, guid: 6bbb4ed2770c0dd4b8c08dcc26bc20ad, type: 3}
+  sinnerType: 0
+--- !u!114 &8138815789548429976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2638058873872546492}
+  m_GameObject: {fileID: 3644206717316176765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17506d9f3f0d80f4d8b07351b36a99b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 3830681cb30fbff4bae053647c71ee43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
---- !u!114 &-4789191456420034925
+  name:
+  - "\uCCD0\uB0B4\uAE30"
+  - "\uBC00\uC5B4\uCC0C\uB974\uAE30"
+  - "\uC5F0\uACA9"
+  sprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  type: 030000000400000003000000
+  sinType: 050000000700000003000000
+  ratio: 030000000200000001000000
+  defaultDmg:
+  - 3
+  - 4
+  - 6
+  coin: 010000000200000003000000
+  coinDmg:
+  - 7
+  - 4
+  - 1
+--- !u!114 &2524603609247417894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2638058873872546492}
+  m_GameObject: {fileID: 3644206717316176765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f4057ca867a74341a889260d8693dd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c14825a158539846bd85b68150b9d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sinnerType: 0
+  dmg: 26
+  sinTypes: 0100000003000000
+  sinCounts: 0100000002000000
+  grade: 0
+  sanity: 0
+  endure: 03000000
+  vul: 0500000007000000
+  dialog: "\uC774\uC0C1\uC774 \uBB34\uC5C7\uC774\uB77C \uC0DD\uAC01\uD558\uC2DC\uC624."
+  name: "\uC624\uAC10\uB3C4"
+  sprite: {fileID: 0}
+  type: 4
+  sinType: 3
+  defaultDmg: 18
+  coinDmg: 6

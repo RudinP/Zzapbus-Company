@@ -1,4 +1,4 @@
-public class Abnormality : DefaultChar
+public class DefaultAbnormality : DefaultChar
 {
     SinType vulSin;
 }

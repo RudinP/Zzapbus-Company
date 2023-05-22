@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2115797695189540921}
   - component: {fileID: 8518974943678612625}
-  - component: {fileID: 2115797695189540922}
-  - component: {fileID: 5758301266013878988}
-  - component: {fileID: 2484180418300163077}
+  - component: {fileID: 1416555849514147502}
+  - component: {fileID: 5511479905832940048}
+  - component: {fileID: 7583763757052670211}
   m_Layer: 0
   m_Name: Sinner1
   m_TagString: Sinner
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2115797695189540922
+--- !u!114 &1416555849514147502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,11 +96,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 2115797695189540923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dff32a8d6fc9264dbcc43743be99bde, type: 3}
+  m_Script: {fileID: 11500000, guid: 3368b8f0d85bda94386eab041d2185ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 146
+  dmg: 28
+  defense: 36
+  sanity: 0
+  rumpled:
+  - 110
+  - 70
+  - 20
+  minSpeed: 4
+  maxSpeed: 8
+  tol: 4
+  normal: 5
+  vul: 3
+  skill: {fileID: 5511479905832940048}
+  ego: {fileID: 7583763757052670211}
   portrait: {fileID: 21300000, guid: 6bbb4ed2770c0dd4b8c08dcc26bc20ad, type: 3}
---- !u!114 &5758301266013878988
+  sinnerType: 0
+--- !u!114 &5511479905832940048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,11 +125,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 2115797695189540923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a11ba84c8a77d43847e6fbbbb73d39, type: 3}
+  m_Script: {fileID: 11500000, guid: 3830681cb30fbff4bae053647c71ee43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
---- !u!114 &2484180418300163077
+  name:
+  - "\uCCD0\uB0B4\uAE30"
+  - "\uBC00\uC5B4\uCC0C\uB974\uAE30"
+  - "\uC5F0\uACA9"
+  sprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  type: 030000000400000003000000
+  sinType: 050000000700000003000000
+  ratio: 030000000200000001000000
+  defaultDmg:
+  - 3
+  - 4
+  - 6
+  coin: 010000000200000003000000
+  coinDmg:
+  - 7
+  - 4
+  - 1
+--- !u!114 &7583763757052670211
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +157,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2115797695189540923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1693570030b7c64aac2460cbc8dfd92, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c14825a158539846bd85b68150b9d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sinnerType: 0
+  dmg: 26
+  sinTypes: 0100000003000000
+  sinCounts: 0100000002000000
+  grade: 0
+  sanity: 0
+  endure: 03000000
+  vul: 0500000007000000
+  dialog: "\uC774\uC0C1\uC774 \uBB34\uC5C7\uC774\uB77C \uC0DD\uAC01\uD558\uC2DC\uC624."
+  name: "\uC624\uAC10\uB3C4"
   sprite: {fileID: 0}
+  type: 4
+  sinType: 3
+  defaultDmg: 18
+  coinDmg: 6
