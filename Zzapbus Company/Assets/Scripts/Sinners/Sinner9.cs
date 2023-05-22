@@ -7,12 +7,7 @@ public class Sinner9 : MonoBehaviour
 
     Sinner sinner;
 
-    private void Awake()
-    {
-        Init();
-    }
-
-    private void Init()
+    public void Init()
     {
         sinner = new Sinner();
 
@@ -46,6 +41,5 @@ public class Sinner9 : MonoBehaviour
 
         sinner.character = SinnerType.rodion;
 
-        //sinner.ego = ;
     }
 }

@@ -7,7 +7,7 @@ public class SkillSinner12 : MonoBehaviour
     public List<Skill> skills;
     public List<Sprite> sprites;
 
-    private void Init()
+    public void Init()
     {
         Skill skill1 = new();
         skill1.name = "베기";

@@ -5,7 +5,7 @@ public class Ego10 : MonoBehaviour
     public Sprite sprite;
     public Ego skill;
 
-    private void Init()
+    public void Init()
     {
         skill = new();
 

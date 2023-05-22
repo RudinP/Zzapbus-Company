@@ -7,12 +7,7 @@ public class Sinner3 : MonoBehaviour
 
     Sinner sinner;
 
-    private void Awake()
-    {
-        Init();
-    }
-
-    private void Init()
+    public void Init()
     {
         sinner = new Sinner();
 
