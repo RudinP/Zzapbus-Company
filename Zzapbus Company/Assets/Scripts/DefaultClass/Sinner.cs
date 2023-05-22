@@ -7,5 +7,5 @@ public class Sinner: DefaultChar
 
     public SinnerType character;
 
-    public List<Skill> ego;
+    public Ego ego;
 }
