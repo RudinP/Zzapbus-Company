@@ -6,7 +6,7 @@ public class DefaultChar
 
     public struct Tolerance
     {
-        public SkillType tol, endure, normal, val;
+        public SkillType tol, endure, normal, vul;
     }
 
     public Type charType;
@@ -21,13 +21,13 @@ public class DefaultChar
 
     public int sanity;
 
-    public int[] rumpled;
+    public float[] rumpled;
 
     public Speed speed;
 
     public Tolerance tolerance;
 
-    public List<Skill> skills;
+    public SkillScript skills;
 
     public List<Passive> passives;
 

@@ -31,8 +31,14 @@ public class FlowManager : MonoBehaviour
         SceneManager.LoadScene("CharacterSelect");
     } 
 
+    public void ToCharacterInfo(Sinner sinner)
+    {
+        SceneManager.LoadScene("CharacterInfo");
+    }
+
     public void ToBattle()
     {
         SceneManager.LoadScene("Battle");
     }
+
 }
