@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
 
     SinnerLoader sinnerLoader;
 
+    public GameObject sinnerBox;
     public List<Toggle> selection;
     public List<TMP_Text> sinBoxTxt;
 
@@ -24,6 +25,8 @@ public class UIManager : MonoBehaviour
     {
         sinnerLoader = SinnerLoader.instance;
         sinners = sinnerLoader.sinners;
+
+        SinnerView();
 
         InitSin();
         SinView();
@@ -126,6 +129,15 @@ public class UIManager : MonoBehaviour
         for (int index = 0; index < sinBoxTxt.Count; index++)
         {
             sinBoxTxt[index].text = $"X {skillEgoCount[index]}/{egoSkillCount[index]}";
+        }
+    }
+
+    private void SinnerView()
+    {
+        for(int index = 0; index < 12; index++)
+        {
+            sinnerBox.transform.GetChild(index).
+                transform.GetChild(0).GetComponent<Image>().sprite = sinners[index++].GetComponent<SinnerScript>().portrait;
         }
     }
 }

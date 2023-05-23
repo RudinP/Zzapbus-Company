@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eeb9f837a3ef404ab97d7b99e83bc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sinnerBox: {fileID: 1330562137}
   selection:
   - {fileID: 927983255}
   - {fileID: 1858227053}
