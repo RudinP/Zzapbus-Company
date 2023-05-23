@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SkillScript : MonoBehaviour
 {
-    private int skillCount;
     public List<Skill> skills;
 
     public List<string> name;
@@ -18,7 +17,7 @@ public class SkillScript : MonoBehaviour
 
     public void Init()
     {
-        for(int i = 0; i < skillCount; i++)
+        for(int i = 0; i < skills.Count; i++)
         {
             Skill skill = new();
             skill.name = name[i];

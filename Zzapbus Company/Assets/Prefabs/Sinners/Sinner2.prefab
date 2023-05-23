@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3368b8f0d85bda94386eab041d2185ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 146
+  hp: 171
   dmg: 28
   defense: 36
   sanity: 0
@@ -107,15 +107,15 @@ MonoBehaviour:
   - 110
   - 70
   - 20
-  minSpeed: 4
-  maxSpeed: 8
+  minSpeed: 2
+  maxSpeed: 4
   tol: 4
   normal: 5
   vul: 3
   skill: {fileID: 3691041927054966018}
   ego: {fileID: 1620013983661833745}
-  portrait: {fileID: 21300000, guid: 6bbb4ed2770c0dd4b8c08dcc26bc20ad, type: 3}
-  sinnerType: 0
+  portrait: {fileID: 21300000, guid: 74b840a1a06ace0469d9b3810c79dd51, type: 3}
+  sinnerType: 1
 --- !u!114 &3691041927054966018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,25 +129,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name:
-  - "\uCCD0\uB0B4\uAE30"
-  - "\uBC00\uC5B4\uCC0C\uB974\uAE30"
-  - "\uC5F0\uACA9"
+  - "\uB0B4\uB824\uBCA0\uAE30"
+  - "\uC62C\uB824\uBCA0\uAE30"
+  - "\uD6C4\uBCBC\uCC0C\uB974\uAE30"
+  - "\uD68C\uD53C"
   sprite:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  type: 030000000400000003000000
-  sinType: 050000000700000003000000
-  ratio: 030000000200000001000000
+  - {fileID: 0}
+  type: 05000000050000000400000001000000
+  sinType: 06000000030000000400000000000000
+  ratio: 03000000020000000100000000000000
   defaultDmg:
   - 3
   - 4
   - 6
-  coin: 010000000200000003000000
+  - 2
+  coin: 01000000020000000200000001000000
   coinDmg:
   - 7
   - 4
-  - 1
+  - 2
+  - 10
 --- !u!114 &1620013983661833745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,18 +164,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c14825a158539846bd85b68150b9d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sinnerType: 0
+  sinnerType: 1
   dmg: 26
-  sinTypes: 0100000003000000
-  sinCounts: 0100000002000000
+  sinTypes: 0400000006000000
+  sinCounts: 0200000004000000
   grade: 0
   sanity: 0
-  endure: 03000000
-  vul: 0500000007000000
-  dialog: "\uC774\uC0C1\uC774 \uBB34\uC5C7\uC774\uB77C \uC0DD\uAC01\uD558\uC2DC\uC624."
-  name: "\uC624\uAC10\uB3C4"
+  endure: 06000000
+  vul: 0200000004000000
+  dialog: "\uBAA8\uB4E0 \uACB0\uACFC\uB4E4\uC740 \uD30C\uC6B0\uC2A4\uD2B8\uAC00 \uC54C\uC544\uC694."
+  name: "\uD45C\uC0C1\uBC29\uCD9C\uAE30"
   sprite: {fileID: 0}
-  type: 4
-  sinType: 3
-  defaultDmg: 18
-  coinDmg: 6
+  type: 5
+  sinType: 6
+  defaultDmg: 19
+  coinDmg: 4

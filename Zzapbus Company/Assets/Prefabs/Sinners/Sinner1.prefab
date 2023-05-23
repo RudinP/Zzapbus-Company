@@ -132,22 +132,26 @@ MonoBehaviour:
   - "\uCCD0\uB0B4\uAE30"
   - "\uBC00\uC5B4\uCC0C\uB974\uAE30"
   - "\uC5F0\uACA9"
+  - "\uAC00"
   sprite:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  type: 030000000400000003000000
-  sinType: 050000000700000003000000
-  ratio: 030000000200000001000000
+  - {fileID: 0}
+  type: 03000000040000000300000000000000
+  sinType: 05000000070000000300000000000000
+  ratio: 03000000020000000100000001000000
   defaultDmg:
   - 3
   - 4
   - 6
-  coin: 010000000200000003000000
+  - 7
+  coin: 01000000020000000300000001000000
   coinDmg:
   - 7
   - 4
   - 1
+  - 3
 --- !u!114 &7583763757052670211
 MonoBehaviour:
   m_ObjectHideFlags: 0
