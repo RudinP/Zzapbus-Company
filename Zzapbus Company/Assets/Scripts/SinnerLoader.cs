@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class SinnerLoader : MonoBehaviour
 {
+    public static SinnerLoader instance;
     public List<GameObject> sinners;
+    public List<GameObject> selectedSinners;
 
     public void Awake()
     {
+        Init();
+
         foreach(GameObject sinner in sinners)
         {
             sinner.GetComponent<SkillScript>().Init();
@@ -15,4 +19,18 @@ public class SinnerLoader : MonoBehaviour
             sinner.GetComponent<SinnerScript>().Init();
         }
     }
+
+    private void Init()
+    {
+        if (instance)
+        {
+            Destroy(this);
+            return;
+        }
+
+        instance = this;
+
+        DontDestroyOnLoad(gameObject);
+    }
+        
 }

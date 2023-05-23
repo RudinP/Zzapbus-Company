@@ -42,7 +42,7 @@ public class EgoScript : MonoBehaviour
         skill.dialog = dialog;
 
         skill.name = name;
-        skill.sprite = sprite;
+        //skill.sprite = sprite;
         skill.type = type;
         skill.sinType = sinType;
         skill.ratio = 0;

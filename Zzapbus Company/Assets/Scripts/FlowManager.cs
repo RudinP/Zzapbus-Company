@@ -9,6 +9,10 @@ public class FlowManager : MonoBehaviour
 
     private void Awake()
     {
+        Init();
+    }
+    void Init()
+    {
         if (instance)
         {
             Destroy(this);
