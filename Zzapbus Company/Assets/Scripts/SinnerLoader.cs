@@ -17,7 +17,7 @@ public class SinnerLoader : MonoBehaviour
             sinner.GetComponent<SkillScript>().Init();
             sinner.GetComponent<EgoScript>().Init();
             sinner.GetComponent<SinnerScript>().Init();
-        }
+        }   
     }
 
     private void Init()
@@ -32,5 +32,15 @@ public class SinnerLoader : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
+
+    public void BattleInit()
+    {
+        foreach (GameObject sinner in selectedSinners)
+        {
+            BattleManager.instance.sinners.Add(Instantiate(sinner));
+        }
+    }
+
+    
         
 }

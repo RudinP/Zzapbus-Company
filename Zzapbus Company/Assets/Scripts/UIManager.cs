@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     public List<Toggle> selection;
     public List<TMP_Text> sinBoxTxt;
     public GameObject sinnerInfoCanvas;
+    public GameObject startBtn;
 
     int totalSinner;
     bool isFull;
@@ -58,6 +59,7 @@ public class UIManager : MonoBehaviour
         {
             clickTime = 0;
         }
+        StartBtn();
     }
 
     public void MouseDown()
@@ -195,6 +197,14 @@ public class UIManager : MonoBehaviour
     {
         selection.ForEach(x => x.enabled = true);
         sinnerInfoCanvas.SetActive(false);
+    }
+
+    private void StartBtn()
+    {
+        if (totalSinner < 5)
+            startBtn.GetComponent<Button>().interactable = false;
+        else
+            startBtn.GetComponent <Button>().interactable = true;
     }
 
 }
