@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class FlowManager : MonoBehaviour
 {
     public static FlowManager instance;
-
+   
     private void Awake()
     {
         Init();
@@ -34,11 +34,6 @@ public class FlowManager : MonoBehaviour
     {
         SceneManager.LoadScene("CharacterSelect");
     } 
-
-    public void ToCharacterInfo(Sinner sinner)
-    {
-        SceneManager.LoadScene("CharacterInfo");
-    }
 
     public void ToBattle()
     {

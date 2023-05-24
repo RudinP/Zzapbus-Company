@@ -2,7 +2,7 @@ public class Passive
 {
     bool isSupport;
 
-    string name;
+    string nameStr;
 
     string info;
 

@@ -11,7 +11,7 @@ public class DefaultChar
 
     public Type charType;
     
-    public string name;
+    public string nameStr;
 
     public float hp;
 

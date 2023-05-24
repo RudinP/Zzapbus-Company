@@ -7,7 +7,7 @@ public class SkillScript : MonoBehaviour
     public List<Skill> skills;
 
     int skillCount = 3;
-    public List<string> name;
+    public List<string> nameStr;
     public List<Sprite> sprite;
     public List<SkillType> type;
     public List<SinType> sinType;
@@ -22,7 +22,7 @@ public class SkillScript : MonoBehaviour
         for(int i = 0; i < skillCount; i++)
         {
             Skill skill = new();
-            skill.name = name[i];
+            skill.nameStr = nameStr[i];
             //skill.sprite = sprite[i];
             skill.type = type[i];
             skill.sinType = sinType[i];

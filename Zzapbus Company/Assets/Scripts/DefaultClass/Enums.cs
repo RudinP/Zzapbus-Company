@@ -35,18 +35,18 @@ public enum SkillType
 
 public enum SinnerType
 {
-    yisang,
-    faust,
-    donquixote,
-    ryosyu,
-    meursault,
-    honglu,
-    heathcliff,
-    ishmael,
-    rodion,
-    sinclair,
-    outis,
-    gregor
+    이상,
+    파우스트,
+    돈키호테,
+    료슈,
+    뫼르소,
+    홍루,
+    히스클리프,
+    이스마엘,
+    로쟈,
+    싱클레어,
+    오티스,
+    그레고르
 }
 
 //에고 등급

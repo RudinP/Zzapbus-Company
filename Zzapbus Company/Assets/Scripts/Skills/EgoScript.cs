@@ -15,7 +15,7 @@ public class EgoScript : MonoBehaviour
     public List<SinType> endure;
     public List<SinType> vul;
     public string dialog;
-    public string name;
+    public string nameStr;
     public Sprite sprite;
     public SkillType type;
     public SinType sinType;
@@ -41,7 +41,7 @@ public class EgoScript : MonoBehaviour
         skill.tolerance.vul = sinTypes;
         skill.dialog = dialog;
 
-        skill.name = name;
+        skill.nameStr = nameStr;
         //skill.sprite = sprite;
         skill.type = type;
         skill.sinType = sinType;

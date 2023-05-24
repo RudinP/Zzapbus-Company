@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Skill
 {
-    public string name;
+    public string nameStr;
 
     public Sprite sprite;
 

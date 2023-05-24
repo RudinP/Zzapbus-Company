@@ -1,5 +1,5 @@
+using System;
 using System.Collections.Generic;
-using System.Reflection;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     List<GameObject> sinners;
+    List<SinnerScript> sinnerScripts;
 
     List<int> skillEgoCount;
     List<int> egoSkillCount;
@@ -16,15 +17,27 @@ public class UIManager : MonoBehaviour
     public GameObject sinnerBox;
     public List<Toggle> selection;
     public List<TMP_Text> sinBoxTxt;
+    public GameObject sinnerInfoCanvas;
 
     int totalSinner;
     bool isFull;
     public int sinnerLimit;
 
+    private float clickTime;
+    private float minClickTime = 1;
+    private bool isClick;
+
     private void Start()
     {
         sinnerLoader = SinnerLoader.instance;
+
+        sinnerScripts = new();
         sinners = sinnerLoader.sinners;
+        
+        foreach(GameObject sinner in sinners)
+        {
+            sinnerScripts.Add(sinner.GetComponent<SinnerScript>());
+        }
 
         SinnerView();
 
@@ -33,6 +46,34 @@ public class UIManager : MonoBehaviour
 
         totalSinner = 0;
         isFull = false;
+    }
+
+    private void Update()
+    {
+        if (isClick)
+        {
+            clickTime += Time.deltaTime;
+        }
+        else
+        {
+            clickTime = 0;
+        }
+    }
+
+    public void MouseDown()
+    {
+        isClick = true;
+    }
+
+    public void MouseUp(int index)
+    {
+        isClick = false;
+        
+        if(clickTime >= minClickTime)
+        {
+            selection.ForEach(x => x.enabled = false);
+            SinnerInfo(index);
+        }
     }
 
     public void Selection(int i)
@@ -45,8 +86,6 @@ public class UIManager : MonoBehaviour
 
             AddSin(i);
             SinView();
-
-            Debug.Log($"Selected {sinners[i].name.ToString()}");
         }
         else if (!selection[i].isOn)
         {
@@ -64,7 +103,7 @@ public class UIManager : MonoBehaviour
                         toggle.interactable = true;
                 }
             }
-            Debug.Log($"Deselected {sinners[i].name.ToString()}");
+
         }
         //제한초과
         if (totalSinner >= sinnerLimit)
@@ -137,7 +176,25 @@ public class UIManager : MonoBehaviour
         for(int index = 0; index < 12; index++)
         {
             sinnerBox.transform.GetChild(index).
-                transform.GetChild(0).GetComponent<Image>().sprite = sinners[index++].GetComponent<SinnerScript>().portrait;
+                transform.GetChild(0).GetComponent<Image>().sprite = sinnerScripts[index].portrait;
         }
     }
+
+    private void SinnerInfo(int index)
+    {
+        GameObject img = sinnerInfoCanvas.transform.GetChild(0).GetChild(0).gameObject;
+        GameObject info = sinnerInfoCanvas.transform.GetChild(0).GetChild(1).gameObject;
+
+        img.GetComponent<Image>().sprite = sinnerScripts[index].portrait;
+        info.transform.GetChild(1).GetComponent<TMP_Text>().text = sinnerScripts[index].nameStr + " " + sinnerScripts[index].sinnerType;
+
+        sinnerInfoCanvas.SetActive(true);
+    }
+
+    public void CloseSinnerInfo()
+    {
+        selection.ForEach(x => x.enabled = true);
+        sinnerInfoCanvas.SetActive(false);
+    }
+
 }

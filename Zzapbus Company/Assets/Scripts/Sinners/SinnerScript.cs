@@ -4,7 +4,7 @@ using UnityEngine;
 public class SinnerScript : MonoBehaviour
 {
 
-    //public string name;
+    public string nameStr = "LCB 수감자";
     public float hp;
     public float dmg;
     public float defense;
@@ -29,7 +29,7 @@ public class SinnerScript : MonoBehaviour
 
         sinner.charType = Type.sinner;
 
-        sinner.name = "LCB 수감자";
+        sinner.nameStr = "LCB 수감자";
 
         sinner.hp = hp;
 
