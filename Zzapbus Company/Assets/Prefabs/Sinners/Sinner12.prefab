@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3368b8f0d85bda94386eab041d2185ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameStr: "LCB \uC218\uAC10\uC790"
   hp: 146
   dmg: 31
   defense: 33
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3830681cb30fbff4bae053647c71ee43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name:
+  nameStr:
   - "\uBCA0\uAE30"
   - "\uD6C4\uBE44\uAE30"
   - "\uC370\uC5B4\uB0B4\uAE30"
@@ -173,7 +174,7 @@ MonoBehaviour:
   endure: 03000000
   vul: 0500000007000000
   dialog: "\uB0B4 \uD314\uC740\xB7\xB7\xB7 \uBCC0\uD574\uC788\uC5C8\uC5B4."
-  name: "\uC5B4\uB290\uB0A0 \uAC11\uC790\uAE30"
+  nameStr: "\uC5B4\uB290\uB0A0 \uAC11\uC790\uAE30"
   sprite: {fileID: 0}
   type: 5
   sinType: 3
