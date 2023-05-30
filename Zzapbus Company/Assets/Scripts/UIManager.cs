@@ -28,6 +28,20 @@ public class UIManager : MonoBehaviour
     private float minClickTime = 1;
     private bool isClick;
 
+    public Button firstSelectedBtn;
+
+    private SinnerScript selectedSinner;
+
+    public TMP_Text sinnerInfo;
+
+    public Image skillIcon;
+    public Image skillType;
+    public Image skillSinType;
+    public List <GameObject> coins;
+    public TMP_Text defaultDmg;
+    public TMP_Text coinDmg;
+    public TMP_Text skillName;
+
     private void Start()
     {
         sinnerLoader = SinnerLoader.instance;
@@ -184,11 +198,17 @@ public class UIManager : MonoBehaviour
 
     private void SinnerInfo(int index)
     {
+        selectedSinner = sinnerScripts[index];
+
         GameObject img = sinnerInfoCanvas.transform.GetChild(0).GetChild(0).gameObject;
         GameObject info = sinnerInfoCanvas.transform.GetChild(0).GetChild(1).gameObject;
 
-        img.GetComponent<Image>().sprite = sinnerScripts[index].portrait;
-        info.transform.GetChild(1).GetComponent<TMP_Text>().text = sinnerScripts[index].nameStr + " " + sinnerScripts[index].sinnerType;
+        img.GetComponent<Image>().sprite = selectedSinner.portrait;
+        info.transform.GetChild(1).GetComponent<TMP_Text>().text = selectedSinner.nameStr + " " + selectedSinner.sinnerType;
+        sinnerInfo.text = $"HP {selectedSinner.hp}\t속도 {selectedSinner.minSpeed}-{selectedSinner.maxSpeed}\t공격 {selectedSinner.dmg}\t방어 {selectedSinner.defense}";
+
+        firstSelectedBtn.onClick.Invoke();
+        firstSelectedBtn.Select();
 
         sinnerInfoCanvas.SetActive(true);
     }
@@ -205,6 +225,25 @@ public class UIManager : MonoBehaviour
             startBtn.GetComponent<Button>().interactable = false;
         else
             startBtn.GetComponent <Button>().interactable = true;
+    }
+
+    public void LoadSkillInfo(int infoIndex)
+    {
+        coins.ForEach(x => x.SetActive(false));
+
+        Skill skill = selectedSinner.skill.skills[infoIndex];
+
+        skillIcon.sprite = skill.sprite;
+        defaultDmg.text = skill.defaultDmg.ToString();
+        coinDmg.text = "+" + skill.coinDmg.ToString();
+        skillName.text = skill.nameStr;
+        skillType.sprite = SkillSpriteLoader.instance.ReturnSkillTypeSprite(skill.type);
+        skillSinType.sprite = SkillSpriteLoader.instance.ReturnSinSprite(skill.sinType);
+
+        for(int count = 0; count < skill.coin; count++)
+        {
+            coins[count].SetActive(true);
+        }
     }
 
 }

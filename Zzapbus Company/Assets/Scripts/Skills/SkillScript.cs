@@ -6,7 +6,7 @@ public class SkillScript : MonoBehaviour
 {
     public List<Skill> skills;
 
-    int skillCount = 3;
+    private int skillCount;
     public List<string> nameStr;
     public List<Sprite> sprite;
     public List<SkillType> type;
@@ -19,6 +19,8 @@ public class SkillScript : MonoBehaviour
     public void Init()
     {
         skills = new();
+        skillCount = 4;
+
         for(int i = 0; i < skillCount; i++)
         {
             Skill skill = new();
