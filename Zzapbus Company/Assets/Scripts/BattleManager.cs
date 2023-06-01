@@ -5,8 +5,10 @@ using UnityEngine;
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager instance;
-
     public List<GameObject> sinners;
+
+    public List<GameObject> sinnerSpawnPoints;
+    public List<GameObject> AbnormalitySpawnPoints;
 
     void Awake()
     {
@@ -14,5 +16,12 @@ public class BattleManager : MonoBehaviour
         sinners = new();
         SinnerLoader.instance.BattleInit();
     }
+
+    void InitNode()
+    {
+        
+    }
+
+    
 
 }

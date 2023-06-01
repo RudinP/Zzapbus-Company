@@ -22,6 +22,7 @@ public class SinnerScript : MonoBehaviour
 
     Sinner sinner;
 
+    public int Speed { get { return Random.Range(minSpeed, maxSpeed + 1); } }
 
     public void Init()
     {
@@ -56,4 +57,5 @@ public class SinnerScript : MonoBehaviour
 
         sinner.character = sinnerType;
     }
+
 }
