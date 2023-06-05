@@ -74,6 +74,8 @@ public class BattleManager : MonoBehaviour
         if (characters[0].tag == "Abnormality")
             return;
 
+        characterBySpeed.Reverse();
+
         LinkSkillPanel(characterBySpeed);
         
     }
