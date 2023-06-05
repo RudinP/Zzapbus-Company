@@ -6,37 +6,52 @@ using UnityEngine;
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager instance;
+    
     public List<GameObject> sinners;
+    public List<GameObject> abnormalities;
 
     public List<GameObject> sinnerSpawnPoints;
-    public List<GameObject> AbnormalitySpawnPoints;
+    public List<GameObject> abnormalitySpawnPoints;
 
     void Awake()
     {
         instance = this;
+        
         sinners = new();
+
+        for(int i = 0; i < abnormalities.Count; i++)
+        {
+            var abnormality = Instantiate(abnormalities[i]);
+            abnormalities[i] = abnormality;
+        }
+        
         SinnerLoader.instance.BattleInit();
         
-        PlaceSinner();
+        Place(sinners, sinnerSpawnPoints);
+        Place(abnormalities, abnormalitySpawnPoints);
     }
 
-    void PlaceSinner()
+    void Place(List<GameObject> characters, List<GameObject> points)
     {
         Dictionary<GameObject, int> speeds = new();
 
-        foreach(GameObject sinner in sinners)
+        foreach(GameObject character in characters)
         {
-            speeds[sinner] = sinner.GetComponent<SinnerScript>().Speed;
+            if (character.tag == "Sinner")
+                speeds[character] = character.GetComponent<SinnerScript>().Speed;
+            else if (character.tag == "Abnormality")
+                speeds[character] = character.GetComponent<AbnormalityScript>().Speed;
         }
 
-        var sinnerBySpeed = speeds.OrderBy(x => x.Value).ToList();
+        var characterBySpeed = speeds.OrderBy(x => x.Value).ToList();
 
-        for(int i = 0; i < sinnerSpawnPoints.Count; i++)
+        for(int i = 0; i < points.Count; i++)
         {
-            sinnerBySpeed[i].Key.transform.parent = sinnerSpawnPoints[i].transform;
-            sinnerBySpeed[i].Key.transform.localPosition = Vector3.zero;
+            characterBySpeed[i].Key.transform.parent = points[i].transform;
+            characterBySpeed[i].Key.transform.localPosition = Vector3.zero;
         }
     }
+
 
     
 
