@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SkillScript : MonoBehaviour
 {
     public List<Skill> skills;
+    public List<Skill> availableSkills;
 
     private int skillCount;
     public List<string> nameStr;
@@ -15,6 +17,19 @@ public class SkillScript : MonoBehaviour
     public List<float> defaultDmg;
     public List<int> coin;
     public List<float> coinDmg;
+    Skill Skill { 
+        get 
+        {
+            int skillNum = Random.Range(0, skills.Sum(x => x.ratio) + 1);// 1 2 3 ~6
+
+            if (skillNum < skills[2].ratio) // 0
+                return skills[2];
+            else if (skillNum < skills[2].ratio + skills[1].ratio) // 1 2
+                return skills[1];
+            else
+                return skills[0]; // 3 4 5 
+        } 
+    }
 
     public void Init()
     {
@@ -35,5 +50,21 @@ public class SkillScript : MonoBehaviour
 
             skills.Add(skill);
         }
+    }
+    
+    public void InitBattleSkill()
+    {
+        availableSkills = new();
+
+        for (int i = 0; i < 3; i++)
+        {
+            availableSkills.Add(Skill);
+        }
+    }
+
+    public void Use(int skillNum)
+    {
+        availableSkills.RemoveAt(skillNum);
+        availableSkills.Add(Skill);
     }
 }

@@ -135,10 +135,10 @@ MonoBehaviour:
   - "\uC5F0\uACA9"
   - "\uAC00\uB4DC"
   sprite:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: ae73a3ef503095146b5f01a843bbf4b3, type: 3}
+  - {fileID: 21300000, guid: ae73a3ef503095146b5f01a843bbf4b3, type: 3}
+  - {fileID: 21300000, guid: ae73a3ef503095146b5f01a843bbf4b3, type: 3}
+  - {fileID: 21300000, guid: ae73a3ef503095146b5f01a843bbf4b3, type: 3}
   type: 05000000050000000500000000000000
   sinType: 03000000060000000500000000000000
   ratio: 03000000020000000100000000000000
