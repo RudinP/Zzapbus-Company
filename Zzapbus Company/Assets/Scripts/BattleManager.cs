@@ -17,6 +17,8 @@ public class BattleManager : MonoBehaviour
 
     public List<GameObject> skillList;
 
+    public GameObject skillPanel;
+
     void Awake()
     {
         instance = this;
@@ -47,6 +49,8 @@ public class BattleManager : MonoBehaviour
             sinner.GetComponent<SinnerScript>().Init();
             sinner.GetComponent<SkillScript>().InitBattleSkill();
         }
+
+        SkillScript.skillPanel = skillPanel;
     }
 
     void Place(List<GameObject> characters, List<GameObject> points)

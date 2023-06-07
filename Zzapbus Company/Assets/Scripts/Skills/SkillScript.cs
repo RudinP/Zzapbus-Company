@@ -1,7 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillScript : MonoBehaviour
 {
@@ -17,8 +17,14 @@ public class SkillScript : MonoBehaviour
     public List<float> defaultDmg;
     public List<int> coin;
     public List<float> coinDmg;
-    Skill Skill { 
-        get 
+
+    public DefaultChar character;
+
+    public static GameObject skillPanel;
+
+    Skill Skill
+    {
+        get
         {
             int skillNum = Random.Range(0, skills.Sum(x => x.ratio) + 1);// 1 2 3 ~6
 
@@ -28,7 +34,7 @@ public class SkillScript : MonoBehaviour
                 return skills[1];
             else
                 return skills[0]; // 3 4 5 
-        } 
+        }
     }
 
     public void Init()
@@ -36,7 +42,7 @@ public class SkillScript : MonoBehaviour
         skills = new();
         skillCount = 4;
 
-        for(int i = 0; i < skillCount; i++)
+        for (int i = 0; i < skillCount; i++)
         {
             Skill skill = new();
             skill.nameStr = nameStr[i];
@@ -51,7 +57,7 @@ public class SkillScript : MonoBehaviour
             skills.Add(skill);
         }
     }
-    
+
     public void InitBattleSkill()
     {
         availableSkills = new();
@@ -62,9 +68,41 @@ public class SkillScript : MonoBehaviour
         }
     }
 
-    public void Use(int skillNum)
+    public void Use(int skillNum, DefaultChar sender, DefaultChar receiver)
     {
+        Skill skill = availableSkills[skillNum];
+        float totalDmg = skill.defaultDmg;
+
+        for(int coin = 0; coin < skill.coin; coin++)
+        {
+            skillPanel.transform.GetChild(0).GetChild(coin).gameObject.SetActive(true);
+        }
+
+        skillPanel.transform.GetChild(1).GetComponent<Text>().text = skill.nameStr;
+        skillPanel.transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite = skill.sprite;
+
+        skillPanel.SetActive(true);
+
+        //나중에 여기 코루틴처리 해야할듯
+        for(int coin = 0; coin < skill.coin; coin++)
+        {
+            character.animator.SetTrigger("attack");
+
+            bool coinToss = skill.CoinToss(sender.Sanity);
+            
+            skillPanel.transform.GetChild(0).GetChild(coin).GetComponent<Image>().color = coinToss ? Color.white : Color.black;
+            float dmg =  coinToss? skill.coinDmg : 0;
+            
+            totalDmg += dmg;
+        }
+
+        skillPanel.SetActive(false);
+
+        receiver.Hp -= totalDmg;
+
         availableSkills.RemoveAt(skillNum);
         availableSkills.Add(Skill);
     }
+
+
 }

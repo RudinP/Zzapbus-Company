@@ -52,6 +52,8 @@ public class AbnormalityScript : MonoBehaviour
 
         abnormality.skills = skill;
 
+        abnormality.animator = GetComponent<Animator>();
+
         //abnormality.passives = ;
 
     }

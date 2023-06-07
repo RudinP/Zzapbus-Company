@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2029948198226845764}
   - component: {fileID: 674026106226418085}
   - component: {fileID: 7243842644678071061}
+  - component: {fileID: 5332256959591010556}
   m_Layer: 0
   m_Name: Sinner6
   m_TagString: Sinner
@@ -180,3 +181,24 @@ MonoBehaviour:
   sinType: 5
   defaultDmg: 15
   coinDmg: 10
+--- !u!95 &5332256959591010556
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2750714797686630216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a41616e6a12ee4438fdc3d50c209c53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

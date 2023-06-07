@@ -58,6 +58,10 @@ public class SinnerScript : MonoBehaviour
         sinner.portrait = portrait;
 
         sinner.character = sinnerType;
+
+        sinner.animator = GetComponent<Animator>();
+
+        GetComponent<SkillScript>().character = sinner;
     }
 
 }
