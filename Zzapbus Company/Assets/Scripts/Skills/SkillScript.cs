@@ -46,7 +46,7 @@ public class SkillScript : MonoBehaviour
         {
             Skill skill = new();
             skill.nameStr = nameStr[i];
-            //skill.sprite = sprite[i];
+            skill.sprite = sprite[i];
             skill.type = type[i];
             skill.sinType = sinType[i];
             skill.ratio = ratio[i];

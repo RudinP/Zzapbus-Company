@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b81bd3f93b5a8d74794af5bbdf2a080c
+guid: 56b6566809e511949a603c445965d756
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,18 +102,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -129,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: defenseType_0
+      name: skillSprite_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 20
-        width: 100
-        height: 100
+        x: 5
+        y: 0
+        width: 33
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f2b23a6b6e13cd4aac14ba4b98a02d6
-      internalID: -307910428
+      spriteID: 17a6720115e6162418e26dee7ccdaeb1
+      internalID: -1553567586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: defenseType_1
+      name: skillSprite_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 16
-        width: 100
-        height: 100
+        x: 42
+        y: 0
+        width: 33
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 603c28db4b4479f41ad2b9d42439e70c
-      internalID: -1169486795
+      spriteID: 815e08185bec5154badc655313472bd8
+      internalID: 759181867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: defenseType_2
+      name: skillSprite_2
       rect:
         serializedVersion: 2
-        x: 194
-        y: 18
-        width: 100
-        height: 100
+        x: 82
+        y: 0
+        width: 33
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62669a9fabc2ff5489c977c9b6453734
-      internalID: -581115065
+      spriteID: 8e0e3c8aeef80364dbf5bc354cb013d2
+      internalID: 1375703667
       vertices: []
       indices: 
       edges: []
@@ -202,9 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      defenseType_0: -307910428
-      defenseType_1: -1169486795
-      defenseType_2: -581115065
+      skillSprite_0: -1553567586
+      skillSprite_1: 759181867
+      skillSprite_2: 1375703667
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1

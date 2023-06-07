@@ -117,7 +117,7 @@ MonoBehaviour:
   skill: {fileID: 2259844901040497198}
   ego: {fileID: 2980633150254526564}
   portrait: {fileID: 21300000, guid: 23170b163488e074f9362f88ce2c69c0, type: 3}
-  sinnerType: 1
+  sinnerType: 10
 --- !u!114 &2259844901040497198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,10 +136,10 @@ MonoBehaviour:
   - "\uB6AB\uC5B4\uB0B4\uAE30"
   - "\uD68C\uD53C"
   sprite:
-  - {fileID: 21300000, guid: ae73a3ef503095146b5f01a843bbf4b3, type: 3}
-  - {fileID: 21300000, guid: ae73a3ef503095146b5f01a843bbf4b3, type: 3}
-  - {fileID: 21300000, guid: ae73a3ef503095146b5f01a843bbf4b3, type: 3}
-  - {fileID: 21300000, guid: ae73a3ef503095146b5f01a843bbf4b3, type: 3}
+  - {fileID: -1553567586, guid: 56b6566809e511949a603c445965d756, type: 3}
+  - {fileID: 759181867, guid: 56b6566809e511949a603c445965d756, type: 3}
+  - {fileID: 1375703667, guid: 56b6566809e511949a603c445965d756, type: 3}
+  - {fileID: -581115065, guid: b81bd3f93b5a8d74794af5bbdf2a080c, type: 3}
   type: 04000000030000000400000001000000
   sinType: 03000000060000000500000000000000
   ratio: 03000000020000000100000000000000
