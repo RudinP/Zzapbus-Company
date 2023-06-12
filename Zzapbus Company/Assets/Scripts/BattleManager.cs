@@ -19,6 +19,11 @@ public class BattleManager : MonoBehaviour
 
     public GameObject skillPanel;
 
+    public GameObject targetArrow;
+
+    List<int> sinnerToAb;
+    List<int> abToSinner;
+
     void Awake()
     {
         instance = this;
@@ -48,9 +53,10 @@ public class BattleManager : MonoBehaviour
             sinner.GetComponent<SkillScript>().Init();
             sinner.GetComponent<SinnerScript>().Init();
             sinner.GetComponent<SkillScript>().InitBattleSkill();
-        }
+        }   
 
         SkillScript.skillPanel = skillPanel;
+        TargetSinner(sinners.Count);
     }
 
     void Place(List<GameObject> characters, List<GameObject> points)
@@ -114,7 +120,19 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    void TargetSinner(int sinnerCount)
+    {
+        abToSinner = new();
+        for(int i = 0; i < sinnerCount; i++)
+        {
+            abToSinner.Add(Random.Range(0, sinnerCount));
 
+            GameObject targetSinner = sinnerSpawnPoints[abToSinner[i]].transform.GetChild(0).GetChild(0).gameObject;
+            GameObject abnormal = abnormalitySpawnPoints[i].transform.GetChild(0).GetChild(0).gameObject;
+            
+            Instantiate(targetArrow).GetComponent<TargetArrow>().Target(abnormal, targetSinner);
+        }
+    }
     
 
 }

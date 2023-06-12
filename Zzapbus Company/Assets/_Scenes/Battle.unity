@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 11708142}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 58208575}
   m_Layer: 0
   m_Name: AbnormalityNode2
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 63846876}
   m_Layer: 0
   m_Name: SinnerNode3
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 71328022}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1139,7 +1139,7 @@ GameObject:
   - component: {fileID: 161081877}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1374,6 +1374,7 @@ MonoBehaviour:
   - {fileID: 1486488258}
   - {fileID: 285780207}
   skillPanel: {fileID: 1410860335}
+  targetArrow: {fileID: 5016572275805137079, guid: e645dfc258b9bb444866d2f98a2065d4, type: 3}
 --- !u!4 &167058513
 Transform:
   m_ObjectHideFlags: 0
@@ -2669,7 +2670,7 @@ GameObject:
   - component: {fileID: 339011213}
   m_Layer: 0
   m_Name: AbnormalityNode5
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2836,7 +2837,7 @@ GameObject:
   - component: {fileID: 398007419}
   m_Layer: 0
   m_Name: SinnerNode
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3009,7 +3010,7 @@ GameObject:
   - component: {fileID: 409068497}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3356,7 +3357,7 @@ GameObject:
   - component: {fileID: 426751979}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3534,7 +3535,7 @@ GameObject:
   - component: {fileID: 459453228}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3870,7 +3871,7 @@ GameObject:
   - component: {fileID: 513818090}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4336,7 +4337,7 @@ GameObject:
   - component: {fileID: 554882004}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4669,7 +4670,7 @@ GameObject:
   - component: {fileID: 613062792}
   m_Layer: 0
   m_Name: SinnerNode2
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4871,7 +4872,7 @@ GameObject:
   - component: {fileID: 669166595}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5004,7 +5005,7 @@ GameObject:
   - component: {fileID: 697840797}
   m_Layer: 0
   m_Name: AbnormalityNode
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5195,7 +5196,7 @@ GameObject:
   - component: {fileID: 722067348}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5379,7 +5380,7 @@ GameObject:
   - component: {fileID: 772871270}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6130,7 +6131,7 @@ GameObject:
   - component: {fileID: 889146925}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6229,7 +6230,7 @@ GameObject:
   - component: {fileID: 896767501}
   m_Layer: 0
   m_Name: AbnormalityNode4
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6584,7 +6585,7 @@ GameObject:
   - component: {fileID: 969697318}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7418,7 +7419,7 @@ GameObject:
   - component: {fileID: 1115574549}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7662,7 +7663,7 @@ GameObject:
   - component: {fileID: 1189546123}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8013,7 +8014,7 @@ GameObject:
   - component: {fileID: 1321794111}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8148,7 +8149,7 @@ GameObject:
   - component: {fileID: 1325699405}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8604,7 +8605,7 @@ GameObject:
   - component: {fileID: 1435121205}
   m_Layer: 0
   m_Name: AbnormalityNode1
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8896,7 +8897,7 @@ GameObject:
   - component: {fileID: 1492390489}
   m_Layer: 0
   m_Name: SinnerNode4
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8930,7 +8931,7 @@ GameObject:
   - component: {fileID: 1495271346}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9367,7 +9368,7 @@ GameObject:
   - component: {fileID: 1548461285}
   m_Layer: 0
   m_Name: SinnerNode1
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9612,7 +9613,7 @@ GameObject:
   - component: {fileID: 1582633713}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10067,7 +10068,7 @@ GameObject:
   - component: {fileID: 1618215025}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10279,7 +10280,7 @@ GameObject:
   - component: {fileID: 1680153260}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10371,7 +10372,7 @@ GameObject:
   - component: {fileID: 1707692752}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10764,7 +10765,7 @@ GameObject:
   - component: {fileID: 1750393805}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10992,7 +10993,7 @@ GameObject:
   - component: {fileID: 1763147195}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11838,7 +11839,7 @@ GameObject:
   - component: {fileID: 1928395542}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11927,7 +11928,7 @@ GameObject:
   - component: {fileID: 1945159558}
   m_Layer: 0
   m_Name: SinnerNode5
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12114,7 +12115,7 @@ GameObject:
   - component: {fileID: 2020645410}
   m_Layer: 5
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12358,7 +12359,7 @@ GameObject:
   - component: {fileID: 2076512926}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12457,7 +12458,7 @@ GameObject:
   - component: {fileID: 2086673475}
   m_Layer: 0
   m_Name: AbnormalityNode3
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12491,7 +12492,7 @@ GameObject:
   - component: {fileID: 2087806246}
   m_Layer: 5
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12627,7 +12628,7 @@ GameObject:
   - component: {fileID: 2098442954}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Abnormality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13016,7 +13017,7 @@ GameObject:
   - component: {fileID: 2136383314}
   m_Layer: 5
   m_Name: Skill
-  m_TagString: Untagged
+  m_TagString: Sinner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
