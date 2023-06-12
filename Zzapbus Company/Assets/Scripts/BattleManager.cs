@@ -79,10 +79,17 @@ public class BattleManager : MonoBehaviour
             characterBySpeed[i].Key.transform.localPosition = Vector3.zero;
 
             LinkSpeed(points[i], characterBySpeed[i].Value);
+
+            if (characterBySpeed[i].Key.tag == "Abnormality")
+            {
+                SkillScript skill = characterBySpeed[i].Key.GetComponent<SkillScript>();
+                LinkNode(points[i], skill.availableSkills[0]);
+            }
         }
 
         if (characters[0].tag == "Abnormality")
             return;
+
 
         characterBySpeed.Reverse();
 
@@ -118,6 +125,11 @@ public class BattleManager : MonoBehaviour
                 GetChild(4).
                 GetChild(0).GetComponent<Image>().sprite = characterBySpeed[i].Key.GetComponent<SinnerScript>().portrait;       
         }
+    }
+    
+    void LinkNode(GameObject characterNode,Skill skill)
+    {
+        characterNode.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().sprite = skill.sprite;
     }
 
     void TargetSinner(int sinnerCount)
