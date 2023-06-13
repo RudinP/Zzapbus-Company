@@ -149,7 +149,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    void TargetAbnormality(int sinnerIndex,int abnormalityIndex)
+    public void TargetAbnormality(int sinnerIndex,int abnormalityIndex)
     {
         sinnerToAb.Add(sinners[sinnerIndex], abnormalities[abnormalityIndex]);
 

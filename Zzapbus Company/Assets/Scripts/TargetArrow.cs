@@ -18,12 +18,12 @@ public class TargetArrow : MonoBehaviour
         gameObject.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg, Vector3.forward);
         gameObject.transform.position = new Vector2((sender.transform.position.x + receiver.transform.position.x) / 2 , (sender.transform.position.y + receiver.transform.position.y) / 2 + 1.5f);
 
-        if (sender.gameObject.tag == "Sinner")
+        if (sender.gameObject.tag == "SinnerNode")
         {
             renderer.flipY = true;
             renderer.color = Color.blue;
         }    
-        else if (sender.gameObject.tag == "Abnormality")
+        else if (sender.gameObject.tag == "AbnormalityNode")
             renderer.color = Color.red;
     }
 }
