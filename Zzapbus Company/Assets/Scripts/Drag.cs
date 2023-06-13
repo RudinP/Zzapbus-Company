@@ -26,6 +26,9 @@ public class Drag : MonoBehaviour
             endPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log(endPoint);
             arrow.localScale = new Vector2(2, Vector2.Distance(startPoint,endPoint));
+
+            Vector2 vector = endPoint - startPoint;
+            transform.rotation = Quaternion.FromToRotation(Vector3.up, vector);
             
         }
         /*if (Input.GetMouseButtonUp(0))
