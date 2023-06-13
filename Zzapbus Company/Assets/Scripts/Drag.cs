@@ -46,7 +46,12 @@ public class Drag : MonoBehaviour
                 if(result.gameObject.tag == "SinnerNode")
                 {
                     senderIndex = 4 - result.gameObject.transform.parent.GetSiblingIndex();
+
+                    result.gameObject.transform.parent.GetChild(2 - skillIndex).GetComponent<Image>().color = Color.white;
+                    
                     skillIndex = 2 - result.gameObject.transform.GetSiblingIndex();
+
+                    result.gameObject.GetComponent<Image>().color = Color.blue;
                 }
             }
         }
