@@ -84,7 +84,7 @@ public class Drag : MonoBehaviour
 
             Debug.Log($"{senderIndex}  {receiverIndex}");
 
-            //BattleManager.instance.TargetAbnormality(senderIndex, receiverIndex);
+            BattleManager.instance.TargetAbnormality(senderIndex, receiverIndex);
         }
     }
 }

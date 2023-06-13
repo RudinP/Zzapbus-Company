@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -8,7 +7,7 @@ using UnityEngine.UI;
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager instance;
-    
+
     public List<GameObject> sinners;
     public List<GameObject> abnormalities;
 
@@ -22,17 +21,17 @@ public class BattleManager : MonoBehaviour
     public GameObject targetArrow;
 
     Dictionary<GameObject, GameObject> sinnerToAb;
-    Dictionary<GameObject,GameObject> abToSinner;
+    Dictionary<GameObject, GameObject> abToSinner;
 
     void Awake()
     {
         instance = this;
-        
+
         sinners = new();
         SinnerLoader.instance.BattleInit();
 
         Init();
-        
+
         Place(sinners, sinnerSpawnPoints);
         Place(abnormalities, abnormalitySpawnPoints);
     }
@@ -53,7 +52,7 @@ public class BattleManager : MonoBehaviour
             sinner.GetComponent<SkillScript>().Init();
             sinner.GetComponent<SinnerScript>().Init();
             sinner.GetComponent<SkillScript>().InitBattleSkill();
-        }   
+        }
 
         SkillScript.skillPanel = skillPanel;
         sinnerToAb = new();
@@ -63,7 +62,7 @@ public class BattleManager : MonoBehaviour
     {
         Dictionary<GameObject, int> speeds = new();
 
-        foreach(GameObject character in characters)
+        foreach (GameObject character in characters)
         {
             if (character.tag == "Sinner")
                 speeds[character] = character.GetComponent<SinnerScript>().Speed;
@@ -73,7 +72,7 @@ public class BattleManager : MonoBehaviour
 
         var characterBySpeed = speeds.OrderBy(x => x.Value).ToList();
 
-        for(int i = 0; i < points.Count; i++)
+        for (int i = 0; i < points.Count; i++)
         {
             characterBySpeed[i].Key.transform.parent = points[i].transform;
             characterBySpeed[i].Key.transform.localPosition = Vector3.zero;
@@ -97,7 +96,7 @@ public class BattleManager : MonoBehaviour
         characterBySpeed.Reverse();
 
         LinkSkillPanel(characterBySpeed);
-        
+
     }
 
     void LinkSpeed(GameObject point, int speed)
@@ -107,7 +106,7 @@ public class BattleManager : MonoBehaviour
 
     void LinkSkillPanel(List<KeyValuePair<GameObject, int>> characterBySpeed)
     {
-        for(int i = 0; i < characterBySpeed.Count; i++)
+        for (int i = 0; i < characterBySpeed.Count; i++)
         {
             skillList[i].transform.
                 GetChild(2).
@@ -126,11 +125,11 @@ public class BattleManager : MonoBehaviour
 
             skillList[i].transform.
                 GetChild(4).
-                GetChild(0).GetComponent<Image>().sprite = characterBySpeed[i].Key.GetComponent<SinnerScript>().portrait;       
+                GetChild(0).GetComponent<Image>().sprite = characterBySpeed[i].Key.GetComponent<SinnerScript>().portrait;
         }
     }
-    
-    void LinkNode(GameObject characterNode,Skill skill)
+
+    void LinkNode(GameObject characterNode, Skill skill)
     {
         characterNode.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().sprite = skill.sprite;
     }
@@ -138,7 +137,7 @@ public class BattleManager : MonoBehaviour
     void TargetSinner(int sinnerCount)
     {
         abToSinner = new();
-        for(int i = 0; i < abnormalities.Count; i++)
+        for (int i = 0; i < abnormalities.Count; i++)
         {
             int index = Random.Range(0, sinnerCount);
             abToSinner.Add(abnormalities[i], sinners[index]);
@@ -149,16 +148,20 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    public void TargetAbnormality(int sinnerIndex,int abnormalityIndex)
+    public void TargetAbnormality(int sinnerIndex, int abnormalityIndex)
     {
-        sinnerToAb.Add(sinners[sinnerIndex], abnormalities[abnormalityIndex]);
+        GameObject sinner = sinnerSpawnPoints[sinnerIndex].transform.GetChild(1).gameObject;
+        GameObject abnormality = abnormalitySpawnPoints[abnormalityIndex].transform.GetChild(1).gameObject;
 
-        GameObject targetAbnormalityNode = abnormalities[abnormalityIndex].transform.parent.GetChild(0).GetChild(0).gameObject;
-        GameObject sinnerNode = sinners[sinnerIndex].transform.parent.GetChild(0).GetChild(0).gameObject;
+        if (!sinnerToAb.TryAdd(sinner, abnormality))
+            sinnerToAb[sinner] = abnormality;
+
+        GameObject targetAbnormalityNode = abnormality.transform.parent.GetChild(0).GetChild(0).gameObject;
+        GameObject sinnerNode = sinner.transform.parent.GetChild(0).GetChild(0).gameObject;
 
         Instantiate(targetArrow).GetComponent<TargetArrow>().Target(sinnerNode, targetAbnormalityNode);
     }
-    
+
     void StartBattle()
     {
         //ToNextTurn()
@@ -166,6 +169,7 @@ public class BattleManager : MonoBehaviour
 
     void ToNextTurn()
     {
+        TargetArrow.Clear();
         TargetSinner(sinners.Count);
         sinnerToAb.Clear();
     }

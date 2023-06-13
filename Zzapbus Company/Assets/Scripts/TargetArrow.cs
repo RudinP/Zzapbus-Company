@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class TargetArrow : MonoBehaviour
 {
+    public static Dictionary<GameObject, GameObject> targetArrows = new();
     float width;
     float height;
 
+    public static void Clear()
+    {
+        foreach(var targetArrow in targetArrows.Values) Destroy(targetArrow);
+        targetArrows.Clear();
+    }
+
     public void Target(GameObject sender, GameObject receiver)
     {
+        if(targetArrows.ContainsKey(sender))
+        {
+            Destroy(targetArrows[sender]);
+            targetArrows.Remove(sender);
+        }
+
         SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
         Vector3 vector = sender.transform.position - receiver.transform.position;
         width = vector.x;
@@ -25,5 +38,7 @@ public class TargetArrow : MonoBehaviour
         }    
         else if (sender.gameObject.tag == "AbnormalityNode")
             renderer.color = Color.red;
+
+        targetArrows.Add(sender, gameObject);
     }
 }
