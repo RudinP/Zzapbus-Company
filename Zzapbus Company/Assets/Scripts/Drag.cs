@@ -17,6 +17,8 @@ public class Drag : MonoBehaviour
     public GraphicRaycaster gr1;
     public GraphicRaycaster gr2;
 
+    int skillIndex;
+
     private void Start()
     {
         arrow = GetComponent<Transform>();
@@ -44,6 +46,7 @@ public class Drag : MonoBehaviour
                 if(result.gameObject.tag == "SinnerNode")
                 {
                     senderIndex = 4 - result.gameObject.transform.parent.GetSiblingIndex();
+                    skillIndex = 2 - result.gameObject.transform.GetSiblingIndex();
                 }
             }
         }
@@ -84,7 +87,7 @@ public class Drag : MonoBehaviour
 
             Debug.Log($"{senderIndex}  {receiverIndex}");
 
-            BattleManager.instance.TargetAbnormality(senderIndex, receiverIndex);
+            BattleManager.instance.TargetAbnormality(senderIndex, receiverIndex, skillIndex);
         }
     }
 }

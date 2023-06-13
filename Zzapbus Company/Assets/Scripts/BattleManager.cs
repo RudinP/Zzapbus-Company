@@ -148,7 +148,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    public void TargetAbnormality(int sinnerIndex, int abnormalityIndex)
+    public void TargetAbnormality(int sinnerIndex, int abnormalityIndex, int skillNum)
     {
         GameObject sinner = sinnerSpawnPoints[sinnerIndex].transform.GetChild(1).gameObject;
         GameObject abnormality = abnormalitySpawnPoints[abnormalityIndex].transform.GetChild(1).gameObject;
@@ -159,6 +159,8 @@ public class BattleManager : MonoBehaviour
         GameObject targetAbnormalityNode = abnormality.transform.parent.GetChild(0).GetChild(0).gameObject;
         GameObject sinnerNode = sinner.transform.parent.GetChild(0).GetChild(0).gameObject;
 
+        LinkNode(sinner.transform.parent.gameObject, sinner.GetComponent<SkillScript>().availableSkills[skillNum]);
+        
         Instantiate(targetArrow).GetComponent<TargetArrow>().Target(sinnerNode, targetAbnormalityNode);
     }
 
