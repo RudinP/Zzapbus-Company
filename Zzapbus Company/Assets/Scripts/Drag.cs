@@ -31,10 +31,10 @@ public class Drag : MonoBehaviour
             transform.rotation = Quaternion.FromToRotation(Vector3.up, vector);
             
         }
-        /*if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
             arrow.localScale = Vector2.zero;
             arrow.transform.rotation = Quaternion.Euler(0, 0, 0);
-        }*/
+        }
     }
 }

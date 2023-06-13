@@ -21,8 +21,8 @@ public class BattleManager : MonoBehaviour
 
     public GameObject targetArrow;
 
-    List<int> sinnerToAb;
-    List<int> abToSinner;
+    Dictionary<GameObject, GameObject> sinnerToAb;
+    Dictionary<GameObject,GameObject> abToSinner;
 
     void Awake()
     {
@@ -56,7 +56,7 @@ public class BattleManager : MonoBehaviour
         }   
 
         SkillScript.skillPanel = skillPanel;
-        TargetSinner(sinners.Count);
+        sinnerToAb = new();
     }
 
     void Place(List<GameObject> characters, List<GameObject> points)
@@ -88,7 +88,10 @@ public class BattleManager : MonoBehaviour
         }
 
         if (characters[0].tag == "Abnormality")
+        {
+            TargetSinner(sinners.Count);
             return;
+        }
 
 
         characterBySpeed.Reverse();
@@ -135,16 +138,36 @@ public class BattleManager : MonoBehaviour
     void TargetSinner(int sinnerCount)
     {
         abToSinner = new();
-        for(int i = 0; i < sinnerCount; i++)
+        for(int i = 0; i < abnormalities.Count; i++)
         {
-            abToSinner.Add(Random.Range(0, sinnerCount));
+            int index = Random.Range(0, sinnerCount);
+            abToSinner.Add(abnormalities[i], sinners[index]);
 
-            GameObject targetSinner = sinnerSpawnPoints[abToSinner[i]].transform.GetChild(0).GetChild(0).gameObject;
-            GameObject abnormal = abnormalitySpawnPoints[i].transform.GetChild(0).GetChild(0).gameObject;
-            
-            Instantiate(targetArrow).GetComponent<TargetArrow>().Target(abnormal, targetSinner);
+            GameObject targetSinnerNode = sinners[index].transform.parent.GetChild(0).GetChild(0).gameObject;
+            GameObject abnormalityNode = abnormalities[i].transform.parent.GetChild(0).GetChild(0).gameObject;
+            Instantiate(targetArrow).GetComponent<TargetArrow>().Target(abnormalityNode, targetSinnerNode);
         }
     }
+
+    void TargetAbnormality(int sinnerIndex,int abnormalityIndex)
+    {
+        sinnerToAb.Add(sinners[sinnerIndex], abnormalities[abnormalityIndex]);
+
+        GameObject targetAbnormalityNode = abnormalities[abnormalityIndex].transform.parent.GetChild(0).GetChild(0).gameObject;
+        GameObject sinnerNode = sinners[sinnerIndex].transform.parent.GetChild(0).GetChild(0).gameObject;
+
+        Instantiate(targetArrow).GetComponent<TargetArrow>().Target(sinnerNode, targetAbnormalityNode);
+    }
     
+    void StartBattle()
+    {
+        //ToNextTurn()
+    }
+
+    void ToNextTurn()
+    {
+        TargetSinner(sinners.Count);
+        sinnerToAb.Clear();
+    }
 
 }
