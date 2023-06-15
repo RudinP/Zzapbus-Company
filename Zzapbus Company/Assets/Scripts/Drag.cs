@@ -19,6 +19,8 @@ public class Drag : MonoBehaviour
 
     int skillIndex;
 
+    RaycastResult sinnerNode;
+
     private void Start()
     {
         arrow = GetComponent<Transform>();
@@ -51,7 +53,7 @@ public class Drag : MonoBehaviour
                     
                     skillIndex = 2 - result.gameObject.transform.GetSiblingIndex();
 
-                    result.gameObject.GetComponent<Image>().color = Color.blue;
+                    sinnerNode = result;
                 }
             }
         }
@@ -85,6 +87,7 @@ public class Drag : MonoBehaviour
                 if (result.gameObject.tag == "AbnormalityNode")
                 {
                     receiverIndex = result.gameObject.transform.parent.parent.GetSiblingIndex();
+                    sinnerNode.gameObject.GetComponent<Image>().color = Color.blue;
                 }
             }
 
