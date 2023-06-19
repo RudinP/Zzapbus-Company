@@ -13,11 +13,11 @@ public class Skill
     public int ratio;
 
     public float defaultDmg;
-    
+
     public int coin;
 
     public float coinDmg;
 
-    public virtual void Use(){ }
-   
+    public bool CoinToss(int sanity) => Random.Range(0, 101) >= 50 - sanity ? true : false;
+
 }

@@ -22,6 +22,17 @@ public class FlowManager : MonoBehaviour
         instance = this;
 
         DontDestroyOnLoad(gameObject);
+
+        Application.targetFrameRate = 60;
+        SetResolution();
+    }
+
+    public void SetResolution()
+    {
+        int setWidth = 1920;
+        int setHeight = 1080;
+
+        Screen.SetResolution(setWidth, setHeight, false);
     }
 
     private void Update()

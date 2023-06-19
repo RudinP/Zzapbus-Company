@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6505199814939374515}
   - component: {fileID: 401725315393462029}
   - component: {fileID: 2364796876725951518}
+  - component: {fileID: 1556406023342909247}
   m_Layer: 0
   m_Name: Sinner3
   m_TagString: Sinner
@@ -135,10 +136,10 @@ MonoBehaviour:
   - "\uC815\uC758\uB97C \uC704\uD574!"
   - "\uD68C\uD53C"
   sprite:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -1553567586, guid: 56b6566809e511949a603c445965d756, type: 3}
+  - {fileID: 759181867, guid: 56b6566809e511949a603c445965d756, type: 3}
+  - {fileID: 1375703667, guid: 56b6566809e511949a603c445965d756, type: 3}
+  - {fileID: -581115065, guid: b81bd3f93b5a8d74794af5bbdf2a080c, type: 3}
   type: 04000000040000000400000001000000
   sinType: 02000000070000000400000000000000
   ratio: 03000000020000000100000000000000
@@ -180,3 +181,24 @@ MonoBehaviour:
   sinType: 2
   defaultDmg: 12
   coinDmg: 11
+--- !u!95 &1556406023342909247
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103309902471744806}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a41616e6a12ee4438fdc3d50c209c53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

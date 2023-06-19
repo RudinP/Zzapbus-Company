@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class DefaultChar
 {
@@ -15,11 +17,29 @@ public class DefaultChar
 
     public float hp;
 
+    public float Hp
+    {
+        get => hp;
+        set
+        {
+            hp = value < 0 ? 0 : value; 
+        }
+    }
+
     public float dmg;
 
     public float defense;
 
-    public int sanity;
+    public int sanity = 0;
+
+    public int Sanity
+    {
+        get => sanity;
+        set
+        {
+            sanity = Math.Abs(value) <= 45 ? value : (value < 0 ? -45 : 45);
+        }
+    }
 
     public float[] rumpled;
 
@@ -30,5 +50,12 @@ public class DefaultChar
     public SkillScript skills;
 
     public List<Passive> passives;
+
+    public Animator animator;
+
+    public bool Die 
+    {
+        get => this.hp < 0 ? true : false;
+    }
 
 }
